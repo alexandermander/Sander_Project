@@ -1,27 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Sander_Project.MainPage">
 
-    <StackLayout BackgroundColor="#4ED2FA">
+    <StackLayout>
         <Label 
-            Text="{Binding MyStringProperty}" 
-            HorizontalOptions="Center" 
-            FontSize="65" 
-            TextColor="Black" 
-            x:Name="sander_id"  
-            Margin="150" />
-        
-        <Button 
-            Text="Clickme" 
-            Clicked="HanderClicked" 
-            HorizontalOptions="Center" 
-            VerticalOptions="Center" 
-            HeightRequest="150" 
-            WidthRequest="150" 
-            BackgroundColor="#FA4B5D" />
+                Text="Start tid:" 
+                HorizontalOptions="Center" 
+                FontSize="36" 
+                TextColor="Black" 
+                x:Name="sander_id"  
+                Padding="0,60,0,0"/>
 
 
+        <TimePicker 
+                x:Name="timePickerA" 
+                FontSize="36" 
+                HorizontalOptions="Center" />
+        <TimePicker
+                x:Name="timePickerB"
+                HorizontalOptions="Center"
+                FontSize="36"/>
+
+        <Button
+                    Margin="0, 60,0,0"
+                    Text="Tid"
+                    WidthRequest="100"
+                    HorizontalOptions="Center"
+                    HeightRequest="100"
+                    x:Name="currentTD"
+                    Clicked="currentTD_Clicked"/>
+        <Label x:Name="myText" TextColor="Black" 
+                    Text="Words"
+                    HorizontalOptions="Center"
+                    FontSize="20"/>
     </StackLayout>
-
 </ContentPage>

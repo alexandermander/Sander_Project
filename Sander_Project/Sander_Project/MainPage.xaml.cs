@@ -10,36 +10,19 @@ namespace Sander_Project
 {
     public partial class MainPage : ContentPage
 	{
-		public string mysting;
-		private string myStringProperty;
-		public int value = 0;
-		public string MyStringProperty
-		{
-			get { return myStringProperty; }
-			set
-			{
-				myStringProperty = value;
-				OnPropertyChanged(nameof(MyStringProperty)); // Notify that there was a change on this property
-			}
-		}
-
 		public MainPage()
 		{
 			InitializeComponent();
 			
 		}
 
-        public void HanderClicked(object sender, EventArgs args)
+        private void currentTD_Clicked(object sender, EventArgs e)
         {
-			Console.WriteLine("sander is testing");
-			BindingContext = this;
-			value = value+1;
-			Console.WriteLine(value);
-
-			MyStringProperty = Convert.ToString(value);
+			var dateA = timePickerA.Time;
+			var dateB = timePickerB.Time;
+			string strDate = Convert.ToString(dateB - dateA);
+			myText.Text = strDate;
 
 		}
-
-      
     }
 }
