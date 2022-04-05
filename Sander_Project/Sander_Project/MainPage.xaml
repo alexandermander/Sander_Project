@@ -2,27 +2,34 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:system="clr-namespace:System;assembly=mscorlib"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Sander_Project.MainPage" BackgroundColor="LightSkyBlue">
+             x:Class="Sander_Project.MainPage" >
              
 
-    <StackLayout>
-        <Label 
-                Text="Start tid:" 
-                HorizontalOptions="Center" 
+    <StackLayout HorizontalOptions="Center">
+        <StackLayout Orientation="Horizontal">
+            <Label
+                Text="A:" 
                 FontSize="36" 
                 TextColor="Black" 
-                x:Name="sander_id"  
-                Padding="0,60,0,0"/>
+                x:Name="ting" Margin="0,10,0,0"/>
 
-
-        <TimePicker 
-                x:Name="timePickerA" 
+            <TimePicker
+                HorizontalOptions="Center"
+                x:Name="timePickerA"
+                FontSize="36" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label
                 FontSize="36" 
-                HorizontalOptions="Center" />
-        <TimePicker
+                TextColor="Black" 
+                x:Name="sander_id" Margin="0,10,0,0"/>
+            <TimePicker
                 x:Name="timePickerB"
                 HorizontalOptions="Center"
                 FontSize="36"/>
+        </StackLayout>
+
+        
 
         <Button
                     BorderColor="Red"
